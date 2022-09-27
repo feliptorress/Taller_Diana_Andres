@@ -1,0 +1,150 @@
+laptop-3irc65kk
+    description: Computer
+    width: 64 bits
+    capabilities: smp vsyscall32
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-memory
+          description: System memory
+          physical id: 0
+          size: 8GiB
+     *-cpu
+          product: Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz
+          vendor: Intel Corp.
+          physical id: 1
+          bus info: cpu@0
+          width: 64 bits
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp x86-64 constant_tsc rep_good nopl xtopology cpuid pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi ept vpid ept_ad fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt xsaveopt xsavec xgetbv1 xsaves flush_l1d arch_capabilities
+     *-scsi:0
+          description: SCSI storage controller
+          product: Virtio filesystem
+          vendor: Red Hat, Inc.
+          physical id: 2
+          bus info: pci@44b6:00:00.0
+          version: 01
+          width: 64 bits
+          clock: 33MHz
+          capabilities: scsi msix bus_master cap_list
+          configuration: driver=virtio-pci latency=64
+          resources: iomemory:b0-af iomemory:b0-af iomemory:b0-af irq:0 memory:bffe08000-bffe08fff memory:bffe09000-bffe09fff memory:bffe0a000-bffe0afff
+        *-virtio2 UNCLAIMED
+             description: Virtual I/O device
+             physical id: 0
+             bus info: virtio@2
+             configuration: driver=9pnet_virtio
+     *-display
+          description: 3D controller
+          product: Microsoft Corporation
+          vendor: Microsoft Corporation
+          physical id: 3
+          bus info: pci@5e0f:00:00.0
+          version: 00
+          width: 32 bits
+          clock: 33MHz
+          capabilities: bus_master cap_list
+          configuration: driver=dxgkrnl latency=0
+          resources: irq:0
+     *-scsi:1
+          description: SCSI storage controller
+          product: Virtio filesystem
+          vendor: Red Hat, Inc.
+          physical id: 4
+          bus info: pci@b18f:00:00.0
+          version: 01
+          width: 64 bits
+          clock: 33MHz
+          capabilities: scsi msix bus_master cap_list
+          configuration: driver=virtio-pci latency=64
+          resources: iomemory:b0-af iomemory:b0-af iomemory:b0-af irq:0 memory:bffe00000-bffe00fff memory:bffe01000-bffe01fff memory:bffe02000-bffe02fff
+        *-virtio0 UNCLAIMED
+             description: Virtual I/O device
+             physical id: 0
+             bus info: virtio@0
+             configuration: driver=9pnet_virtio
+     *-scsi:2
+          description: SCSI storage controller
+          product: Virtio filesystem
+          vendor: Red Hat, Inc.
+          physical id: 5
+          bus info: pci@b69f:00:00.0
+          version: 01
+          width: 64 bits
+          clock: 33MHz
+          capabilities: scsi msix bus_master cap_list
+          configuration: driver=virtio-pci latency=64
+          resources: iomemory:b0-af iomemory:b0-af iomemory:b0-af irq:0 memory:bffe04000-bffe04fff memory:bffe05000-bffe05fff memory:bffe06000-bffe06fff
+        *-virtio1 UNCLAIMED
+             description: Virtual I/O device
+             physical id: 0
+             bus info: virtio@1
+             configuration: driver=9pnet_virtio
+     *-pnp00:00
+          product: PnP device PNP0b00
+          physical id: 6
+          capabilities: pnp
+          configuration: driver=rtc_cmos
+     *-scsi:3
+          physical id: 7
+          logical name: scsi0
+        *-disk:0
+             description: EXT4 volume
+             product: Virtual Disk
+             vendor: Linux
+             physical id: 0.0.0
+             bus info: scsi@0:0.0.0
+             logical name: /dev/sda
+             version: 1.0
+             serial: 3255683f-53a2-4fdf-91cf-b4c1041e2a62
+             size: 256GiB
+             capabilities: journaled extended_attributes large_files huge_files dir_nlink recover 64bit extents ext4 ext2 initialized
+             configuration: ansiversion=5 created=2019-04-10 11:35:05 filesystem=ext4 lastmountpoint=/swap logicalsectorsize=512 modified=2022-09-24 08:36:03 mounted=2022-09-24 08:36:03 sectorsize=4096 state=clean
+        *-disk:1
+             description: EXT4 volume
+             product: Virtual Disk
+             vendor: Linux
+             physical id: 0.0.1
+             bus info: scsi@0:0.0.1
+             logical name: /dev/sdb
+             logical name: /
+             version: 1.0
+             serial: 3255683f-53a2-4fdf-91cf-b4c1041e2a62
+             size: 256GiB
+             capabilities: journaled extended_attributes large_files huge_files dir_nlink recover 64bit extents ext4 ext2 initialized
+             configuration: ansiversion=5 created=2019-04-10 11:35:05 filesystem=ext4 lastmountpoint=/distro logicalsectorsize=512 modified=2022-09-24 08:36:06 mount.fstype=ext4 mount.options=rw,relatime,discard,errors=remount-ro,data=ordered mounted=2022-09-24 08:36:06 sectorsize=4096 state=mounted
+  *-network:0 DISABLED
+       description: Ethernet interface
+       physical id: 1
+       logical name: bond0
+       serial: 5e:c1:34:36:5b:d4
+       capabilities: ethernet physical
+       configuration: autonegotiation=off broadcast=yes driver=bonding driverversion=5.10.16.3-microsoft-standard-WS firmware=2 link=no master=yes multicast=yes
+  *-network:1 DISABLED
+       description: Ethernet interface
+       physical id: 2
+       logical name: dummy0
+       serial: 4e:b2:ea:6c:3a:e2
+       capabilities: ethernet physical
+       configuration: broadcast=yes driver=dummy driverversion=5.10.16.3-microsoft-standard-WS
+  *-network:2
+       description: Ethernet interface
+       physical id: 3
+       logical name: eth0
+       serial: 00:15:5d:9e:9e:b7
+       size: 10Gbit/s
+       capabilities: ethernet physical
+       configuration: autonegotiation=off broadcast=yes driver=hv_netvsc driverversion=5.10.16.3-microsoft-standard-WS duplex=full firmware=N/A ip=172.26.138.118 link=yes multicast=yes speed=10Gbit/s
+Filesystem     1K-blocks     Used Available Use% Mounted on
+/dev/sdb       263174212  2717168 247018888   2% /
+none             4030716        4   4030712   1% /mnt/wsl
+tools          125829116 92379780  33449336  74% /init
+none             4028632        0   4028632   0% /dev
+none             4030716        4   4030712   1% /run
+none             4030716        0   4030716   0% /run/lock
+none             4030716        0   4030716   0% /run/shm
+none             4030716        0   4030716   0% /run/user
+tmpfs            4030716        0   4030716   0% /sys/fs/cgroup
+drivers        125829116 92379780  33449336  74% /usr/lib/wsl/drivers
+lib            125829116 92379780  33449336  74% /usr/lib/wsl/lib
+drvfs          125829116 92379780  33449336  74% /mnt/c
+drvfs          357904380 99968268 257936112  28% /mnt/d
