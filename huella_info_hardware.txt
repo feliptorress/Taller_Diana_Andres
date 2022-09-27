@@ -1,0 +1,1 @@
+630025f8208b8c4039898b1a0c5b6b4bcca5d27f06b3b1b348d54537d7b0f9b4  informacion_hardware_local.txt

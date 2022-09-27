@@ -1,0 +1,1 @@
+48d594b1cc94a5633707f3e7f0a08380f5173008674f20c9b3af0d5e5deda34f  clima_colombia.txt
